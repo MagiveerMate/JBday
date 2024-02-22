@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cyan;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Adjust the container height as needed */
+}
+
+.surrounding-image {
+    width: 100px; /* Increase the width of the image */
+    height: 100px; /* Increase the height of the image */
+    border-radius: 100%; /* Increase the border-radius for a bigger radius */
+    object-fit: cover;
+    position: absolute;
+}
+
+.message {
+    width: 300px; /* Increase the width of the message */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the message is on top of the images */
+    position: relative;
+    text-align: center;
+}
+
+.surrounding-image:nth-child(1) { transform: rotate(30deg) translate(300px) rotate(-30deg); }
+.surrounding-image:nth-child(2) { transform: rotate(60deg) translate(300px) rotate(-60deg); }
+.surrounding-image:nth-child(3) { transform: rotate(90deg) translate(300px) rotate(-90deg); }
+.surrounding-image:nth-child(4) { transform: rotate(120deg) translate(300px) rotate(-120deg); }
+.surrounding-image:nth-child(5) { transform: rotate(150deg) translate(300px) rotate(-150deg); }
+.surrounding-image:nth-child(6) { transform: rotate(180deg) translate(300px) rotate(-180deg); }
+.surrounding-image:nth-child(7) { transform: rotate(210deg) translate(300px) rotate(-210deg); }
+.surrounding-image:nth-child(8) { transform: rotate(240deg) translate(300px) rotate(-240deg); }
+.surrounding-image:nth-child(9) { transform: rotate(270deg) translate(300px) rotate(-270deg); }
+.surrounding-image:nth-child(10) { transform: rotate(300deg) translate(300px) rotate(-300deg); }
+.surrounding-image:nth-child(11) { transform: rotate(330deg) translate(300px) rotate(-330deg); }
+.surrounding-image:nth-child(12) { transform: rotate(360deg) translate(300px) rotate(-360deg); }
+.surrounding-image:nth-child(13) { transform: rotate(390deg) translate(300px) rotate(-390deg); }
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .image-container {
+        height: 80vh;
+    }
+
+    .surrounding-image {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .message {
+        max-width: 90vw;
+    }
+}
